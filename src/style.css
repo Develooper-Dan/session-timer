@@ -1,0 +1,59 @@
+#root{
+  display:flex;
+  background-color: #1e1f20;
+	color: white;
+  position: absolute;
+  top:0px;
+  width: 100vw;
+  height: 100vh;
+  font-size: 18px;
+  transition: 0.8s;
+}
+
+#container{
+	padding: 1em;
+  margin: auto;
+	border: medium dashed white;
+}
+
+#lengthControls{
+	display: flex;
+	justify-content: space-between;
+}
+
+#lengthControls div{
+	padding: 1em;
+	text-align: center;
+}
+
+
+#timer{
+	text-align:center;
+}
+
+#break-length{
+	margin: 0.5em;
+}
+
+#session-length{
+	margin: 0.5em;
+}
+
+#time-left{
+	display: block;
+	font-size: 1.5em;
+	margin: 0.8em;
+}
+
+button{
+	background-color: rgba(0,0,0,0);
+	color: white;
+	border: none;
+	cursor: pointer;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
+button:hover{
+	outline: 1px dotted white;
+}
