@@ -7,13 +7,13 @@ const LengthControls = props => {
 				<h3 id="break-label">
 					Break Length
 				</h3>
-				<button id="break-decrement" onClick={(e)=>{props.changeTargetLength(e.target)}}>
+				<button id="break-decrement" onClick={(e)=> props.updateLengthAndTimer("breakLength", props.breakLength - 1)}>
 					-
 				</button>
 				<span id="break-length">
 					{props.breakLength}
 				</span>
-				<button id="break-increment" onClick={(e)=>{props.changeTargetLength(e.target)}}>
+        <button id="break-increment" onClick={(e)=>props.updateLengthAndTimer("breakLength", props.breakLength + 1)}>
 					+
 				</button>
 			</div>
@@ -21,13 +21,13 @@ const LengthControls = props => {
 				<h3 id="session-label">
 					Session Length
 				</h3>
-				<button id="session-decrement" onClick={(e)=>{props.changeTargetLength(e.target)}}>
+				<button id="session-decrement" onClick={(e)=>props.updateLengthAndTimer("sessionLength", props.sessionLength - 1)}>
 					-
 				</button>
 				<span id="session-length">
 					{props.sessionLength}
 				</span>
-				<button id="session-increment" onClick={(e)=>{props.changeTargetLength(e.target)}}>
+				<button id="session-increment" onClick={(e)=>props.updateLengthAndTimer("sessionLength", props.sessionLength + 1)}>
 					+
 				</button>
 			</div>

@@ -1,51 +1,78 @@
+@import url('http://fonts.cdnfonts.com/css/rosbed');
+@import url('http://fonts.cdnfonts.com/css/joystix');
+
+@keyframes sizePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
 #root{
   display:flex;
-  background-color: #1e1f20;
+  background-color: #392016;
 	color: white;
   position: absolute;
   top:0px;
   width: 100vw;
   height: 100vh;
-  font-size: 18px;
+  font-size: 20px;
+  font-family: 'Rosbed', sans-serif;
   transition: 0.8s;
 }
 
 #container{
 	padding: 1em;
   margin: auto;
+  margin-top: 2em;
 	border: medium dashed white;
+  min-width: 50%;
+  min-height: 50%;
 }
 
 #lengthControls{
 	display: flex;
-	justify-content: space-between;
+  justify-content: space-around;
 }
 
 #lengthControls div{
-	padding: 1em;
+	padding: 0.5em;
+  margin-top: 0.8em;
 	text-align: center;
 }
-
 
 #timer{
 	text-align:center;
 }
 
-#break-length{
-	margin: 0.5em;
-}
-
-#session-length{
-	margin: 0.5em;
-}
-
 #time-left{
 	display: block;
 	font-size: 1.5em;
+  font-family: 'Joystix', sans-serif;
 	margin: 0.8em;
 }
 
+#session-length,#break-length{
+  font-family: 'Joystix', sans-serif;
+}
+
+.critical{
+  color: red;
+  animation: sizePulse 1s ease;
+  animation-iteration-count: 11;
+}
+
+h1{
+  text-shadow: 3px 3px 2px white;
+  transform: scale(1.2) rotate(-5deg);
+  margin-bottom: 1em;
+}
+
 button{
+  font-size: 1em;
+  font-family: 'Rosbed', sans-serif;
 	background-color: rgba(0,0,0,0);
 	color: white;
 	border: none;
@@ -56,4 +83,10 @@ button{
 
 button:hover{
 	outline: 1px dotted white;
+}
+
+@media (min-width: 760px){
+  #root{
+    font-size: 24px;
+  }
 }
